@@ -67,7 +67,7 @@ background: #516ca9 !important;
                         </li>
                         @if(Auth::user())
                             @if(Auth::user()->rol_id>2)
-                            <li  class="rd-nav-item {{ (Request::path()=='verplan' )? 'active': ''}}"><a class="rd-nav-link" href="/verplan">Ver Plan</a>
+                            <li  class="rd-nav-item {{ (Request::path()=='verplan' )? 'active': ''}}"><a class="rd-nav-link" href="/verplan">Plan Medico</a>
                             </li>
                             @endif
                           <li class="rd-nav-item"><a class="rd-nav-link" href="/logoutwelcome">Logout</a>
@@ -93,9 +93,9 @@ background: #516ca9 !important;
               <div class="container">
                 <div class="row">
                   <div class="col-md-9 col-lg-7 offset-md-1 offset-xxl-0">
-                    <h1><span class="d-block" data-caption-animate="fadeInUp" data-caption-delay="100" style="color:#516ca9">{{$webText[0]['textweb']}}</span><span class="d-block text-light" data-caption-animate="fadeInUp" data-caption-delay="200" style="color:#516ca9">{{$webText[1]['textweb']}}</span></h1>
-                    <p class="lead" data-caption-animate="fadeInUp" data-caption-delay="350" style="color:#516ca9">{{$webText[2]['textweb']}}.</p>
-                    <div class="button-wrap-default" data-caption-animate="fadeInUp" data-caption-delay="450"><a class="button button-secondary-text" href="#" style="color:#516ca9">Leer mas...</a></div>
+                    <h1><span class="d-block" data-caption-animate="fadeInUp" data-caption-delay="100" style="color:#516ca9"><?php echo $webText[0]['textweb']; ?></span><span class="d-block text-light" data-caption-animate="fadeInUp" data-caption-delay="200" style="color:#516ca9"><?php echo $webText[1]['textweb']; ?></span></h1>
+                    <p class="lead" data-caption-animate="fadeInUp" data-caption-delay="350" style="color:#516ca9"><?php echo $webText[2]['textweb']; ?>.</p>
+                    <div class="button-wrap-default" data-caption-animate="fadeInUp" data-caption-delay="450"><a class="button button-secondary-text" href="/about" style="color:#516ca9">Leer mas...</a></div>
                   </div>
                 </div>
               </div>
@@ -106,8 +106,8 @@ background: #516ca9 !important;
               <div class="container">
                 <div class="row">
                   <div class="col-md-9 col-lg-7 offset-md-1 offset-xxl-0">
-                    <h1><span class="d-block" data-caption-animate="fadeInUp" data-caption-delay="100" style="color:#516ca9">{{$webText[3]['textweb']}}</span><span class="d-block text-light" data-caption-animate="fadeInUp" data-caption-delay="200" style="color:#516ca9">{{$webText[4]['textweb']}}</span></h1>
-                    <p class="lead" data-caption-animate="fadeInUp" data-caption-delay="350" style="color:#516ca9">{{$webText[5]['textweb']}}.</p>
+                    <h1><span class="d-block" data-caption-animate="fadeInUp" data-caption-delay="100" style="color:#516ca9"><?php echo $webText[3]['textweb']; ?></span><span class="d-block text-light" data-caption-animate="fadeInUp" data-caption-delay="200" style="color:#516ca9"><?php echo $webText[4]['textweb']; ?></span></h1>
+                    <p class="lead" data-caption-animate="fadeInUp" data-caption-delay="350" style="color:#516ca9"><?php echo $webText[5]['textweb']; ?>.</p>
                     <div class="button-wrap-default" data-caption-animate="fadeInUp" data-caption-delay="450"><a class="button button-secondary-text" href="#" style="color:#516ca9">Leer mas...</a></div>
                   </div>
                 </div>
@@ -119,8 +119,8 @@ background: #516ca9 !important;
               <div class="container">
                 <div class="row">
                   <div class="col-md-9 col-lg-7 offset-md-1 offset-xxl-0">
-                    <h1><span class="d-block" data-caption-animate="fadeInUp" data-caption-delay="100" style="color:#516ca9">{{$webText[6]['textweb']}}</span><span class="d-block text-light" data-caption-animate="fadeInUp" data-caption-delay="200" style="color:#516ca9">{{$webText[7]['textweb']}}</span></h1>
-                    <p class="lead" data-caption-animate="fadeInUp" data-caption-delay="350" style="color:#516ca9">{{$webText[8]['textweb']}}</p>
+                    <h1><span class="d-block" data-caption-animate="fadeInUp" data-caption-delay="100" style="color:#516ca9"><?php echo $webText[6]['textweb']; ?></span><span class="d-block text-light" data-caption-animate="fadeInUp" data-caption-delay="200" style="color:#516ca9"><?php echo $webText[7]['textweb']; ?></span></h1>
+                    <p class="lead" data-caption-animate="fadeInUp" data-caption-delay="350" style="color:#516ca9"><?php echo $webText[8]['textweb']; ?></p>
                     <div class="button-wrap-default" data-caption-animate="fadeInUp" data-caption-delay="450"><a class="button button-secondary-text" href="#" style="color:#516ca9">Leer mas...</a></div>
                   </div>
                 </div>
@@ -145,23 +145,23 @@ background: #516ca9 !important;
           <div class="row row-30">
             <div class="col-md-4 wow fadeInUp">
               <div class="box-icon-2">
-                <div class="icon novi-icon mercury-icon-calc"></div>
-                <h5 class="title">{{$webText[9]['textweb']}}</h5>
-                <p class="text">{{$webText[10]['textweb']}}</p>
+                <div class="icon novi-icon mercury-icon-card"></div>
+                <h5 class="title"><?php echo $webText[9]['textweb']; ?></h5>
+                <p class="text"><?php echo $webText[10]['textweb']; ?></p>
               </div>
             </div>
             <div class="col-md-4 wow fadeInUp" data-wow-delay="0.2s">
               <div class="box-icon-2">
-                <div class="icon novi-icon mercury-icon-chart"></div>
-                <h5 class="title">{{$webText[11]['textweb']}}</h5>
-                <p class="text">{{$webText[12]['textweb']}}</p>
+                <div class="icon novi-icon mercury-icon-touch"></div>
+                <h5 class="title"><?php echo $webText[11]['textweb']; ?></h5>
+                <p class="text"><?php echo $webText[12]['textweb']; ?></p>
               </div>
             </div>
             <div class="col-md-4 wow fadeInUp" data-wow-delay="0.4s">
               <div class="box-icon-2">
                 <div class="icon novi-icon mercury-icon-time-sand"></div>
-                <h5 class="title">{{$webText[13]['textweb']}}</h5>
-                <p class="text">{{$webText[14]['textweb']}}</p>
+                <h5 class="title"><?php echo $webText[13]['textweb']; ?></h5>
+                <p class="text"><?php echo $webText[14]['textweb']; ?></p>
               </div>
             </div>
           </div>
@@ -174,11 +174,11 @@ background: #516ca9 !important;
           <div class="row row-30">
             <div class="col-md-6">
               <h2 class="title-icon"><span class="icon icon-default mercury-icon-target-2"></span><span>Nuestra <span class="text-light">Mision</span></span></h2>
-              <p class="big">{{$webText[15]['textweb']}}</p>
+              <p class="big"><?php echo $webText[15]['textweb']; ?></p>
               <ul class="list-marked-2">
-                <li>{{$webText[16]['textweb']}}</li>
-                <li>{{$webText[17]['textweb']}}</li>
-                <li>{{$webText[18]['textweb']}}</li>
+                <li><?php echo $webText[16]['textweb']; ?></li>
+                <li><?php echo $webText[17]['textweb']; ?></li>
+                <!--li><?php echo $webText[18]['textweb']; ?></li-->
               </ul>
             </div>
             <div class="col-md-6">
@@ -187,7 +187,7 @@ background: #516ca9 !important;
                   <!--Box counter-->
                   <div class="box-counter">
                     <div class="box-counter-main">
-                      <div class="counter">750</div>
+                      <div class="counter">1805</div>
                     </div>
                     <p class="box-counter-title">Clientes Satisfechos</p>
                   </div>
@@ -196,7 +196,7 @@ background: #516ca9 !important;
                   <!--Box counter-->
                   <div class="box-counter">
                     <div class="box-counter-main">
-                      <div class="counter">15</div>
+                      <div class="counter">3</div>
                     </div>
                     <p class="box-counter-title">Miembros del Equipo</p>
                   </div>
@@ -226,7 +226,7 @@ background: #516ca9 !important;
       </section>
       <section class="section section-md bg-gray-800" style='padding:30px'>
         <div class="container text-center text-xl-left">
-          <h2>Nuestros <span class="text-light">Prestadores</span></h2>
+          <h2>Novedades <span class="text-light"></span></h2>
           <div class="owl-carousel owl-carousel-4 text-center" data-items="1" data-sm-items="3" data-md-items="4" data-lg-items="5" data-xl-items="6" data-dots="true" data-nav="false" data-stage-padding="15" data-loop="false" data-margin="30" data-mouse-drag="false">
             <div class="item"><a class="link-image" href="#"><img src="images/brand-light-1-133x65.png" alt="" width="133" height="32"/></a></div>
             <div class="item"><a class="link-image" href="#"><img src="images/brand-light-2-117x61.png" alt="" width="117" height="30"/></a></div>

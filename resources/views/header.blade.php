@@ -25,7 +25,7 @@
                         </li>
                         @if(Auth::user())
                           @if(Auth::user()->rol_id==3)
-                          <li  class="rd-nav-item {{ (Request::path()=='verplan' )? 'active': ''}}"><a class="rd-nav-link" href="/verplan">Ver Plan</a>
+                          <li  class="rd-nav-item {{ (Request::path()=='verplan' )? 'active': ''}}"><a class="rd-nav-link" style='margin: 15px;' href="/verplan">Plan Medico<n/a>
                           </li>
                           @endif
                           <li class="rd-nav-item"><a class="rd-nav-link" href="/logoutwelcome">Logout</a>

@@ -33,11 +33,14 @@ Route::get('/',[WebController::class, 'welcome']);
 //Route::get('/',[WebController::class, 'mantenimiento']);
 Route::get('/about', [WebController::class, 'about']);
 Route::get('/contacts', [WebController::class, 'contacts']);
-Route::get('/verplan', [WebController::class, 'verplan']);
 
+Route::group(['middleware' => ['auth']], function () {
+Route::get('/verplan', [WebController::class, 'verplan']);
+});
 
 
 Route::group(['middleware' => ['auth','role']], function () {
+    
     //Usuarios rutas
     Route::get('/usuarios',[UsuariosController::class, 'viewAll']);
     Route::get('/usuario/{id}',[UsuariosController::class, 'viewOne']);

@@ -48,15 +48,15 @@
           <h2><span class="text-light">Nuestra</span> Trayectoria</h2>
           <div class="row row-30 justify-content-xl-between">
             <div class="col-md-6 col-xl-6">
-              <p class="big">{{$webText[0]['textweb']}}</p>
+              <p class="big"><?php echo $webText[0]['textweb']; ?></p>
               <div class="box-shadow-2">
                 <div class="box-shadow-header">
                   <div class="unit flex-column flex-md-row">
                     <div class="unit-left">
-                      <div class="heading-5">{{$webText[1]['textweb']}}</div>
+                      <div class="heading-5"><?php echo $webText[1]['textweb']; ?></div>
                     </div>
                     <div class="unit-body">
-                      <p>{{$webText[2]['textweb']}}</p>
+                      <p><?php echo $webText[2]['textweb']; ?></p>
                     </div>
                   </div>
                 </div><img class="img-responsive" src="images/about-1-569x338.jpg" alt="" width="569" height="169"/>
@@ -65,16 +65,16 @@
             <div class="col-md-6 col-xl-5">
               <ul class="list-lg">
                 <li>
-                  <div class="heading-5">{{$webText[3]['textweb']}}</div>
-                  <p class="p-offset-1">{{$webText[4]['textweb']}}</p>
+                  <div class="heading-5"><?php echo $webText[3]['textweb']; ?></div>
+                  <p class="p-offset-1"><?php echo $webText[4]['textweb']; ?></p>
                 </li>
                 <li>
-                  <div class="heading-5">{{$webText[5]['textweb']}}</div>
-                  <p class="p-offset-1">{{$webText[6]['textweb']}}</p>
+                  <div class="heading-5"><?php echo $webText[5]['textweb']; ?></div>
+                  <p class="p-offset-1"><?php echo $webText[6]['textweb']; ?></p>
                 </li>
                 <li>
-                  <div class="heading-5">{{$webText[7]['textweb']}}</div>
-                  <p class="p-offset-1">{{$webText[8]['textweb']}}</p>
+                  <div class="heading-5"><?php echo $webText[7]['textweb']; ?></div>
+                  <p class="p-offset-1"><?php echo $webText[8]['textweb']; ?></p>
                 </li>
                 <li><!--a class="button button-primary" href="#">Read more</a--></li>
               </ul>
@@ -85,7 +85,7 @@
       <!-- Our Principles-->
       <section class="section section-lg bg-gray-100">
         <div class="container text-center text-lg-left">
-          <h2><span class="text-light">Nuestros</span> Principios</h2>
+          <h2><span class="text-light">Beneficios</span> OSCJ</h2>
           <div class="row row-30 number-counter-2">
             <div class="col-md-4">
               <div class="box-numbered-left unit">
@@ -93,8 +93,8 @@
                   <div class="index-counter"></div>
                 </div>
                 <div class="unit-body">
-                  <h5 class="title">{{$webText[9]['textweb']}}</h5>
-                  <div class="content">{{$webText[10]['textweb']}}</div>
+                  <h5 class="title"><?php echo $webText[9]['textweb']; ?></h5>
+                  <div class="content"><?php echo $webText[10]['textweb']; ?></div>
                 </div>
               </div>
             </div>
@@ -104,8 +104,8 @@
                   <div class="index-counter"></div>
                 </div>
                 <div class="unit-body">
-                  <h5 class="title">{{$webText[11]['textweb']}}</h5>
-                  <div class="content">{{$webText[12]['textweb']}}</div>
+                  <h5 class="title"><?php echo $webText[11]['textweb']; ?></h5>
+                  <div class="content"><?php echo $webText[12]['textweb']; ?></div>
                 </div>
               </div>
             </div>
@@ -115,8 +115,41 @@
                   <div class="index-counter"></div>
                 </div>
                 <div class="unit-body">
-                  <h5 class="title">{{$webText[13]['textweb']}}</h5>
-                  <div class="content">{{$webText[14]['textweb']}}</div>
+                  <h5 class="title"><?php echo $webText[13]['textweb']; ?></h5>
+                  <div class="content"><?php echo $webText[14]['textweb']; ?></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="box-numbered-left unit">
+                <div class="unit-left">
+                  <div class="index-counter"></div>
+                </div>
+                <div class="unit-body">
+                  <h5 class="title"><?php echo $webText[24]['textweb']; ?></h5>
+                  <div class="content"><?php echo $webText[25]['textweb']; ?></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="box-numbered-left unit">
+                <div class="unit-left">
+                  <div class="index-counter"></div>
+                </div>
+                <div class="unit-body">
+                  <h5 class="title"><?php echo $webText[26]['textweb']; ?></h5>
+                  <div class="content"><?php echo $webText[27]['textweb']; ?></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="box-numbered-left unit">
+                <div class="unit-left">
+                  <div class="index-counter"></div>
+                </div>
+                <div class="unit-body">
+                  <h5 class="title"><?php echo $webText[28]['textweb']; ?></h5>
+                  <div class="content"><?php echo $webText[29]['textweb']; ?></div>
                 </div>
               </div>
             </div>
@@ -148,11 +181,11 @@
                   <div class="unit-left"><img class="img" src="images/testimonials-1-138x138.jpg" alt="" width="138" height="69"/>
                   </div>
                   <div class="unit-body">
-                    <h5 class="title">{{$webText[15]['textweb']}}</h5>
-                    <div class="subtitle">{{$webText[16]['textweb']}}</div>
+                    <h5 class="title"><?php echo $webText[15]['textweb']; ?></h5>
+                    <div class="subtitle"><?php echo $webText[16]['textweb']; ?></div>
                   </div>
                 </div>
-                <div class="content">{{$webText[17]['textweb']}}</div>
+                <div class="content"><?php echo $webText[17]['textweb']; ?></div>
               </div>
             </div>
             <div class="col-md-4">
@@ -161,11 +194,11 @@
                   <div class="unit-left"><img class="img" src="images/testimonials-2-138x138.jpg" alt="" width="138" height="69"/>
                   </div>
                   <div class="unit-body">
-                    <h5 class="title">{{$webText[18]['textweb']}}</h5>
-                    <div class="subtitle">{{$webText[19]['textweb']}}</div>
+                    <h5 class="title"><?php echo $webText[18]['textweb']; ?></h5>
+                    <div class="subtitle"><?php echo $webText[19]['textweb']; ?></div>
                   </div>
                 </div>
-                <div class="content">{{$webText[20]['textweb']}}</div>
+                <div class="content"><?php echo $webText[20]['textweb']; ?></div>
               </div>
             </div>
             <div class="col-md-4">
@@ -174,11 +207,11 @@
                   <div class="unit-left"><img class="img" src="images/testimonials-3-138x138.jpg" alt="" width="138" height="69"/>
                   </div>
                   <div class="unit-body">
-                    <h5 class="title">{{$webText[21]['textweb']}}</h5>
-                    <div class="subtitle">{{$webText[22]['textweb']}}</div>
+                    <h5 class="title"><?php echo $webText[21]['textweb']; ?></h5>
+                    <div class="subtitle"><?php echo $webText[22]['textweb']; ?></div>
                   </div>
                 </div>
-                <div class="content" style="margin: 5px 0 20px 0;">{{$webText[23]['textweb']}}</div>
+                <div class="content" style="margin: 5px 0 20px 0;"><?php echo $webText[23]['textweb']; ?></div>
               </div>
             </div>
           </div>
