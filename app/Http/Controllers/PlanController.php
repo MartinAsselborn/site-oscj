@@ -55,7 +55,8 @@ class PLanController extends Controller
            return redirect('/planes');
          }
          
-         $fileName=$request->file('pdf')->store('public/planespdf');
+         $fileName=$request->file('pdf')->store('public/planespdf','public');
+         dd($fileName);
          $plan=new Plan();
          $plan->archivo=$fileName;
          $plan->plan=$request->input('plan');
@@ -72,8 +73,9 @@ class PLanController extends Controller
       if(!$request->file()){
          return redirect('/planes');
        }
+       
        $id=$request->input('id');
-       $fileName=$request->file('pdf')->store('public/planespdf');
+       $fileName=$request->file('pdf')->store('public/planespdf','public');
        $plan=Plan::where('id',$id)->get();
        $plan=$plan[0];
        $plan->archivo=$fileName;

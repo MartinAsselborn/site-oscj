@@ -33,6 +33,17 @@
     <div class="page">
     @component('header')
     @endcomponent
+        <?php
+          $miuseragent=trim(strtolower($_SERVER['HTTP_USER_AGENT']));
+          $moviles=["mobile","iphone","ipod","blackberry","opera mini","sony","mot","nokia","samsung"];
+          foreach($moviles as $movil){
+            $detector=(strpos($miuseragent,trim($movil))!==false)?1:0;
+            if($detector==1){
+              break;
+            }
+          }
+        ?> 
+
       <!-- Breadcrumbs se queda tengo q ver q hago con esto-->
       <section class="breadcrumbs-custom bg-image novi-background bg-primary">
         <div class="container">
@@ -43,22 +54,17 @@
         </div>
       </section>
       <!-- Our Story-->
-      <section class="section section-lg bg-default">
-        <div class="container">
-         <?php
-          $miuseragent=trim(strtolower($_SERVER['HTTP_USER_AGENT']));
-          $moviles=["mobile","iphone","ipod","blackberry","opera mini","sony","mot","nokia","samsung"];
-          foreach($moviles as $movil){
-            $detector=(strpos($miuseragent,trim($movil))!==false)?1:0;
-            if($detector==1){
-              break;
-            }
-          }
-        ?> 
+      <section class="section section-lg bg-default" >
+        <div class="container"> 
         @if($legajo->getPlan())
-          @if($detector==0)  
-            <embed src="{{$legajo->getPlan()?$legajo->getPlan()->getArchivo():'none';}}#toolbar=1&navpanes=1&scrollbar=1&pic={{random_int(163000,200000)}}" type="application/pdf" width="100%" height="600px" />
+          @if(strtolower($legajo->getObraSocial()->obra_social)=='osde')
+            <div class="unit-left" style='margin:10px 0px; '><a href="http://www.osde.com.ar" target="_blank"><img  src="images/osde.jfif"  alt="" width="138" height="59"/></a></div>               
+          @else
+            <div class="unit-left" style='margin:20px 0px; '><a href="http://www.medicus.com.ar" target="_blank"><img  src="images/medicus.png"  alt="" width="138" height="59"/></a></div>               
           @endif
+          @if($detector==0)  
+           @endif         <embed src="{{$legajo->getPlan()?$legajo->getPlan()->getArchivo():'none';}}?{{rand(1231,40000);}}#toolbar=1&navpanes=1&scrollbar=1&pic={{random_int(163000,200000)}}" type="application/pdf" width="100%" height="600px" />
+  
           <a style="text-decoration: underline;" href="{{$legajo->getPlan()?$legajo->getPlan()->getArchivo():'none';}}?pic={{random_int(163000,200000)}}" target="_blank">Mira tu PLan haciendo click Aqui</a>
         @else
           <h1>No tiene un plan asignado</h2>

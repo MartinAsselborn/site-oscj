@@ -10,7 +10,7 @@
                 </div>
               <div class="form-group">
                 <label for="pdf">PDF</label>
-                <embed src="{{$plan->getArchivo()}}#toolbar=1&navpanes=1&scrollbar=1" type="application/pdf" width="100%" height="600px" />
+                <embed src="{{$plan->getArchivo()}}?{{rand(1231,40000);}}#toolbar=1&navpanes=1&scrollbar=1" type="application/pdf" width="100%" height="600px" />
               </div>
               
             

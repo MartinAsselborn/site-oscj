@@ -224,7 +224,7 @@ background: #516ca9 !important;
           </div>
         </div>
       </section>
-      <section class="section section-md bg-gray-800" style='padding:30px'>
+      <!--section class="section section-md bg-gray-800" style='padding:30px'>
         <div class="container text-center text-xl-left">
           <h2>Novedades <span class="text-light"></span></h2>
           <div class="owl-carousel owl-carousel-4 text-center" data-items="1" data-sm-items="3" data-md-items="4" data-lg-items="5" data-xl-items="6" data-dots="true" data-nav="false" data-stage-padding="15" data-loop="false" data-margin="30" data-mouse-drag="false">
@@ -236,14 +236,100 @@ background: #516ca9 !important;
             <div class="item"><a class="link-image" href="#"><img src="images/brand-light-6-151x72.png" alt="" width="151" height="36"/></a></div>
           </div>
         </div>
+      </section-->
+      <section class="section section-lg " style="background-color: #516ca9;padding: 5%;">
+        <div class="container text-center text-lg-left bg-default" style="padding: 5%;" >
+          <h2 class="title-icon"><span class="icon icon-default mercury-icon-news"></span><span class="text-light">Ultimas</span> Noticias</h2>
+          <div class="row row-40">
+            <div class="col-md-6">
+              <div class="team-box-left">
+                <div class="team-meta unit align-items-center">
+                  <div class="unit-left"><img  src="images/testimonials-1-138x138.jpg" alt="" width="138" height="69"/>
+                  </div>
+                  <div class="unit-body">
+                    <h5 class="title"><?php echo $webText[15]['textweb']; ?></h5>
+                    <div class="subtitle"><?php echo $webText[16]['textweb']; ?></div>
+                  </div>
+                </div>
+                <div class="content"><?php echo 'roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum'; ?><a href="https://www.argentina.gob.ar/noticias/vizzotti-participo-del-encuentro-latinoamericano-no-mas-polio-derecho-de-todas-y-todos" target="_blank">...Leer Mas</a></div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="team-box-left">
+                <div class="team-meta unit align-items-center">
+                  <div class="unit-left"><img  src="images/testimonials-2-138x138.jpg" alt="" width="138" height="69"/>
+                  </div>
+                  <div class="unit-body">
+                    <h5 class="title"><?php echo $webText[18]['textweb']; ?></h5>
+                    <div class="subtitle"><?php echo $webText[19]['textweb']; ?></div>
+                  </div>
+                </div>
+                <div class="content"><?php echo $webText[20]['textweb']; ?></div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="team-box-left">
+                <div class="team-meta unit align-items-center">
+                  <div class="unit-left"><img  src="images/testimonials-3-138x138.jpg" alt="" width="138" height="69"/>
+                  </div>
+                  <div class="unit-body">
+                    <h5 class="title"><?php echo $webText[21]['textweb']; ?></h5>
+                    <div class="subtitle"><?php echo $webText[22]['textweb']; ?></div>
+                  </div>
+                </div>
+                <div class="content" style="margin: 5px 0 20px 0;"><?php echo $webText[23]['textweb']; ?></div>
+              </div>
+            </div>
+          
+            <div class="col-md-6">
+              <div class="team-box-left">
+                <div class="team-meta unit align-items-center">
+                  <div class="unit-left"><img  src="images/testimonials-1-138x138.jpg" alt="" width="138" height="69"/>
+                  </div>
+                  <div class="unit-body">
+                    <h5 class="title"><?php echo $webText[15]['textweb']; ?></h5>
+                    <div class="subtitle"><?php echo $webText[16]['textweb']; ?></div>
+                  </div>
+                </div>
+                <div class="content"><?php echo $webText[17]['textweb']; ?></div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="team-box-left">
+                <div class="team-meta unit align-items-center">
+                  <div class="unit-left"><img  src="images/testimonials-2-138x138.jpg" alt="" width="138" height="69"/>
+                  </div>
+                  <div class="unit-body">
+                    <h5 class="title"><?php echo $webText[18]['textweb']; ?></h5>
+                    <div class="subtitle"><?php echo $webText[19]['textweb']; ?></div>
+                  </div>
+                </div>
+                <div class="content"><?php echo $webText[20]['textweb']; ?></div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="team-box-left">
+                <div class="team-meta unit align-items-center">
+                  <div class="unit-left"><img  src="images/testimonials-3-138x138.jpg" alt="" width="138" height="69"/>
+                  </div>
+                  <div class="unit-body">
+                    <h5 class="title"><?php echo $webText[21]['textweb']; ?></h5>
+                    <div class="subtitle"><?php echo $webText[22]['textweb']; ?></div>
+                  </div>
+                </div>
+                <div class="content" style="margin: 5px 0 20px 0;"><?php echo $webText[23]['textweb']; ?></div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
-      <section class="parallax-container" data-parallax-img="images/parallax-1-1920x1026.jpg">
+      <!--section class="parallax-container" data-parallax-img="images/parallax-1-1920x1026.jpg">
         <div class="parallax-content section-xl context-dark text-center">
           <div class="container">
             <div class="row justify-content-center">
-              <div class="col-md-10 col-xl-9">
+              <div class="col-md-10 col-xl-9" -->
                 <!--h2>Monthly <span class="text-light">Offer</span></h2-->
-                <!--div class="heading-5 font-weight-normal">Get our FREE financial consultation for your business taxes</div>
+                <!--div class="heading-5 font-weight-normal">Get our FREE financial consultation for your business taxes</div-->
                 <!--TimeCircles-->
                 <!--
                       <div class="countdown" data-countdown data-to="2019-12-31">
@@ -288,35 +374,15 @@ background: #516ca9 !important;
                           </div>
                         </div>
                       </div>
-                -->   
+                   
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </section-->
  
       <!-- Latest Articles-->
-      <section class="section bg-default section-md">
 
-        <!--div class="container">
-          <h2 class="title-icon"><span class="icon icon-default mercury-icon-news"></span><span>Ultimas <span class="text-light">Noticias</span></span></h2>
-          <div class="box-image-small box-image-small-left">
-            <div class="item-image bg-image novi-nackground" style="background-image: url(images/index-1-2-586x334.jpg)"></div>
-            <div class="item-body wow fadeInRight">
-              <p>July 12, 2019</p>
-              <h4><a href="#">Saving Money When Paying Taxes</a></h4>
-              <p class="big">If you’re like a majority of Americans, you may be looking for new, creative ways to ease your annual tax burden. Fortunately, there are several things you can do to cut your taxes or increase...</p>
-            </div>
-          </div>
-          <div class="">
-            <div class="item-image bg-image novi-nackground" style="background-image: url(images/index-1-3-580x334.jpg)"></div>
-            <div class="item-body wow fadeInLeft">
-              <p>July 12, 2019</p>
-              <h4><a href="#">What Is a 1035 Exchange?</a></h4>
-              <p class="big">In this post, we will discuss what a 1035 exchange is and how it helps you manage and preserve your wealth and finances. A 1035 exchange is a specific transfer of funds from one life insurance policy...</p>
-            </div>
-          </div>
-        </div-->
     <!--footer-->
     @component('footer')
     @endcomponent

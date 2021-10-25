@@ -216,6 +216,7 @@
             </div>
           </div>
         </div>
+      </section>
         @component('footer')
         @endcomponent
     </div>

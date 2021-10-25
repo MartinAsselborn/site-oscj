@@ -16,6 +16,6 @@ class Plan extends Model
     ];
 
     public function getArchivo(){
-        return Storage::url($this->archivo);
+        return "/".$this->archivo;
     }
 }
