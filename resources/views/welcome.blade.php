@@ -86,7 +86,11 @@ background: #516ca9 !important;
         </div>
       </header>
       <!--Swiper-->
-      <section class="section swiper-container swiper-slider swiper-slider-1 context-dark" data-loop="true" data-autoplay="5000" data-simulate-touch="false">
+      <section class="section swiper-container swiper-slider swiper-slider-1 context-dark" data-loop="true" data-autoplay="5000" data-simulate-touch="false"
+        style="
+              text-shadow: -1px -1px 0.1px #000, 0.1px 0.1px 0.1px #000, -1px 0.1px 0.1px #000, 0.1px -1px 0.1px #000;
+        "
+      >
         <div class="swiper-wrapper">
           <div class="swiper-slide" data-slide-bg="images/index-1-slider-1-1920x768.jpg">
             <div class="swiper-slide-caption section-lg">
@@ -95,7 +99,9 @@ background: #516ca9 !important;
                   <div class="col-md-9 col-lg-7 offset-md-1 offset-xxl-0">
                     <h1><span class="d-block" data-caption-animate="fadeInUp" data-caption-delay="100" style="color:#516ca9"><?php echo $webText[0]['textweb']; ?></span><span class="d-block text-light" data-caption-animate="fadeInUp" data-caption-delay="200" style="color:#516ca9"><?php echo $webText[1]['textweb']; ?></span></h1>
                     <p class="lead" data-caption-animate="fadeInUp" data-caption-delay="350" style="color:#516ca9"><?php echo $webText[2]['textweb']; ?>.</p>
-                    <div class="button-wrap-default" data-caption-animate="fadeInUp" data-caption-delay="450"><a class="button button-secondary-text" href="/about" style="color:#516ca9">Leer mas...</a></div>
+                    <div class="button-wrap-default" data-caption-animate="fadeInUp" data-caption-delay="450"><a class="button button-secondary-text" href="/about" style="color:#516ca9; 
+                                   text-shadow: 0px 0px 0px #516ca9, 0px 0px 0px #516ca9, 0px 0px 0px #516ca9, 0px 0px 0px #516ca9;
+                    ">Leer mas...</a></div>
                   </div>
                 </div>
               </div>
@@ -108,7 +114,9 @@ background: #516ca9 !important;
                   <div class="col-md-9 col-lg-7 offset-md-1 offset-xxl-0">
                     <h1><span class="d-block" data-caption-animate="fadeInUp" data-caption-delay="100" style="color:#516ca9"><?php echo $webText[3]['textweb']; ?></span><span class="d-block text-light" data-caption-animate="fadeInUp" data-caption-delay="200" style="color:#516ca9"><?php echo $webText[4]['textweb']; ?></span></h1>
                     <p class="lead" data-caption-animate="fadeInUp" data-caption-delay="350" style="color:#516ca9"><?php echo $webText[5]['textweb']; ?>.</p>
-                    <div class="button-wrap-default" data-caption-animate="fadeInUp" data-caption-delay="450"><a class="button button-secondary-text" href="#" style="color:#516ca9">Leer mas...</a></div>
+                    <div class="button-wrap-default" data-caption-animate="fadeInUp" data-caption-delay="450"><a class="button button-secondary-text" href="/about#equipo" style="color:#516ca9;
+                                      text-shadow: 0px 0px 0px #516ca9, 0px 0px 0px #516ca9, 0px 0px 0px #516ca9, 0px 0px 0px #516ca9;
+                      ">Leer mas...</a></div>
                   </div>
                 </div>
               </div>
@@ -121,7 +129,9 @@ background: #516ca9 !important;
                   <div class="col-md-9 col-lg-7 offset-md-1 offset-xxl-0">
                     <h1><span class="d-block" data-caption-animate="fadeInUp" data-caption-delay="100" style="color:#516ca9"><?php echo $webText[6]['textweb']; ?></span><span class="d-block text-light" data-caption-animate="fadeInUp" data-caption-delay="200" style="color:#516ca9"><?php echo $webText[7]['textweb']; ?></span></h1>
                     <p class="lead" data-caption-animate="fadeInUp" data-caption-delay="350" style="color:#516ca9"><?php echo $webText[8]['textweb']; ?></p>
-                    <div class="button-wrap-default" data-caption-animate="fadeInUp" data-caption-delay="450"><a class="button button-secondary-text" href="#" style="color:#516ca9">Leer mas...</a></div>
+                    <div class="button-wrap-default" data-caption-animate="fadeInUp" data-caption-delay="450"><a class="button button-secondary-text" href="#" style="color:#516ca9;
+                                      text-shadow: 0px 0px 0px #516ca9, 0px 0px 0px #516ca9, 0px 0px 0px #516ca9, 0px 0px 0px #516ca9;
+                    ">Leer mas...</a></div>
                   </div>
                 </div>
               </div>
@@ -175,11 +185,11 @@ background: #516ca9 !important;
             <div class="col-md-6">
               <h2 class="title-icon"><span class="icon icon-default mercury-icon-target-2"></span><span>Nuestra <span class="text-light">Mision</span></span></h2>
               <p class="big"><?php echo $webText[15]['textweb']; ?></p>
-              <ul class="list-marked-2">
+              <!--ul class="list-marked-2">
                 <li><?php echo $webText[16]['textweb']; ?></li>
                 <li><?php echo $webText[17]['textweb']; ?></li>
-                <!--li><?php echo $webText[18]['textweb']; ?></li-->
-              </ul>
+                <li><?php echo $webText[18]['textweb']; ?></li>
+              </ul-->
             </div>
             <div class="col-md-6">
               <div class="row">
@@ -241,86 +251,21 @@ background: #516ca9 !important;
         <div class="container text-center text-lg-left bg-default" style="padding: 5%;" >
           <h2 class="title-icon"><span class="icon icon-default mercury-icon-news"></span><span class="text-light">Ultimas</span> Noticias</h2>
           <div class="row row-40">
+           @foreach($noticias as $noticia)
             <div class="col-md-6">
               <div class="team-box-left">
                 <div class="team-meta unit align-items-center">
-                  <div class="unit-left"><img  src="images/testimonials-1-138x138.jpg" alt="" width="138" height="69"/>
+                  <div class="unit-left"><img  src="<?php echo $noticia->getArchivo(); ?>" alt="" width="138" height="69"/>
                   </div>
                   <div class="unit-body">
-                    <h5 class="title"><?php echo $webText[15]['textweb']; ?></h5>
-                    <div class="subtitle"><?php echo $webText[16]['textweb']; ?></div>
+                    <h5 class="title"><?php echo $noticia['titulo']; ?></h5>
+                    <div class="subtitle"><?php echo $noticia['subtitulo']; ?></div>
                   </div>
                 </div>
-                <div class="content"><?php echo 'roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum'; ?><a href="https://www.argentina.gob.ar/noticias/vizzotti-participo-del-encuentro-latinoamericano-no-mas-polio-derecho-de-todas-y-todos" target="_blank">...Leer Mas</a></div>
+                <div class="content"><?php echo $noticia['noticia']; ?><a href="<?php echo $noticia['leermas']; ?>" target="_blank">...Leer Mas</a></div>
               </div>
             </div>
-            <div class="col-md-6">
-              <div class="team-box-left">
-                <div class="team-meta unit align-items-center">
-                  <div class="unit-left"><img  src="images/testimonials-2-138x138.jpg" alt="" width="138" height="69"/>
-                  </div>
-                  <div class="unit-body">
-                    <h5 class="title"><?php echo $webText[18]['textweb']; ?></h5>
-                    <div class="subtitle"><?php echo $webText[19]['textweb']; ?></div>
-                  </div>
-                </div>
-                <div class="content"><?php echo $webText[20]['textweb']; ?></div>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="team-box-left">
-                <div class="team-meta unit align-items-center">
-                  <div class="unit-left"><img  src="images/testimonials-3-138x138.jpg" alt="" width="138" height="69"/>
-                  </div>
-                  <div class="unit-body">
-                    <h5 class="title"><?php echo $webText[21]['textweb']; ?></h5>
-                    <div class="subtitle"><?php echo $webText[22]['textweb']; ?></div>
-                  </div>
-                </div>
-                <div class="content" style="margin: 5px 0 20px 0;"><?php echo $webText[23]['textweb']; ?></div>
-              </div>
-            </div>
-          
-            <div class="col-md-6">
-              <div class="team-box-left">
-                <div class="team-meta unit align-items-center">
-                  <div class="unit-left"><img  src="images/testimonials-1-138x138.jpg" alt="" width="138" height="69"/>
-                  </div>
-                  <div class="unit-body">
-                    <h5 class="title"><?php echo $webText[15]['textweb']; ?></h5>
-                    <div class="subtitle"><?php echo $webText[16]['textweb']; ?></div>
-                  </div>
-                </div>
-                <div class="content"><?php echo $webText[17]['textweb']; ?></div>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="team-box-left">
-                <div class="team-meta unit align-items-center">
-                  <div class="unit-left"><img  src="images/testimonials-2-138x138.jpg" alt="" width="138" height="69"/>
-                  </div>
-                  <div class="unit-body">
-                    <h5 class="title"><?php echo $webText[18]['textweb']; ?></h5>
-                    <div class="subtitle"><?php echo $webText[19]['textweb']; ?></div>
-                  </div>
-                </div>
-                <div class="content"><?php echo $webText[20]['textweb']; ?></div>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="team-box-left">
-                <div class="team-meta unit align-items-center">
-                  <div class="unit-left"><img  src="images/testimonials-3-138x138.jpg" alt="" width="138" height="69"/>
-                  </div>
-                  <div class="unit-body">
-                    <h5 class="title"><?php echo $webText[21]['textweb']; ?></h5>
-                    <div class="subtitle"><?php echo $webText[22]['textweb']; ?></div>
-                  </div>
-                </div>
-                <div class="content" style="margin: 5px 0 20px 0;"><?php echo $webText[23]['textweb']; ?></div>
-              </div>
-            </div>
-          </div>
+           @endforeach
         </div>
       </section>
       <!--section class="parallax-container" data-parallax-img="images/parallax-1-1920x1026.jpg">

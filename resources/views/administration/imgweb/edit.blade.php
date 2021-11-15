@@ -9,7 +9,7 @@
               @csrf
               <div class="form-group col-md-10">
                   <label >TEXTO</label>
-                  <textarea class="form-control" value="{{$webtext->textweb}}" name="textweb" rows="10">
+                  <textarea class="form-control" value="{{$webtext->textweb}}" name="textweb" rows="3">
                         {{$webtext->textweb}}
                   </textarea> 
                 </div>

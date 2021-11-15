@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Rol;
 use App\Models\Legajo;
+use Exception;
+use Illuminate\Support\Facades\Auth;
 use PDOException;
 
 class UsuariosController extends Controller
@@ -116,6 +118,38 @@ class UsuariosController extends Controller
 
       print_r($pass);
       return;
+    }
+
+     public function cambiarPass(Request $request){
+         
+         if(!$request->input("_token") || strlen($request->input("_token"))!=40){
+            return;
+         }
+
+         $id=Auth::user()->id;
+         $user=User::where('id',$id)->get();
+         
+     
+         if(isset($user[0])){
+               if(password_verify($request->input("old"), $user[0]->password)){
+                  $pass=$request->input("new");
+               }else{
+                  return redirect('/logoutwelcome');
+               }
+         }else{
+            return redirect('/logoutwelcome');
+         }
+         try{
+            $user[0]->password=Hash::make($pass);
+            $user[0]->save();
+         }catch(Exception $e){
+            echo "<script>
+                alert('ERROR');
+                window.history.back();
+              </script>";     
+         }
+         return redirect('/logoutwelcome');
+        
     }
 
 }

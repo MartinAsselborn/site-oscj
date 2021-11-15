@@ -9,6 +9,8 @@ use App\Http\Controllers\WebController;
 use App\Http\Controllers\PlanController;
 use App\Http\Controllers\WebTextController;
 use App\Http\Controllers\WebImagenesController;
+use App\Http\Controllers\NoticiasController;
+use App\Http\Controllers\MailController;
 use App\Http\Controllers\Auth\RegisterController;
 
 /*
@@ -35,12 +37,15 @@ Route::get('/about', [WebController::class, 'about']);
 Route::get('/contacts', [WebController::class, 'contacts']);
 
 Route::group(['middleware' => ['auth']], function () {
-Route::get('/verplan', [WebController::class, 'verplan']);
+    Route::get('/verplan', [WebController::class, 'verplan']);
+    Route::post('/cambiarContraseña',[UsuariosController::class, 'cambiarPass']);
 });
 
+    
+Route::post('/enviarMail',[MailController::class,'enviarMail']);
 
 Route::group(['middleware' => ['auth','role']], function () {
-    
+
     //Usuarios rutas
     Route::get('/usuarios',[UsuariosController::class, 'viewAll']);
     Route::get('/usuario/{id}',[UsuariosController::class, 'viewOne']);
@@ -89,6 +94,16 @@ Route::group(['middleware' => ['auth','role']], function () {
      Route::post('/createImagenesWeb',[WebImagenesController::class, 'create']);
      Route::post('/editImagenesWeb',[WebImagenesController::class, 'edit']);
      Route::post('/deleteImagenesWeb',[WebImagenesController::class, 'delete']);
+
+    //Noticia rutas 
+    Route::get('/noticias',[NoticiasController::class, 'viewAll']);
+    Route::get('/noticia/{id}',[NoticiasController::class, 'viewOne']);
+    Route::get('/createNoticia',[NoticiasController::class, 'showFormCreate']);
+    Route::get('/editNoticia/{id}',[NoticiasController::class, 'showFormEdit']);
+    Route::post('/createNoticia',[NoticiasController::class, 'create']);
+    Route::post('/editNoticia',[NoticiasController::class, 'edit']);
+    Route::post('/deleteNoticia',[NoticiasController::class, 'delete']);
+    
 
     Route::get('/administracion',[LegajosController::class, 'viewAll']);
     Route::get('/home', function () {

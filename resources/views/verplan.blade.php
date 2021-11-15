@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
     <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}.rd-navbar-transparent.rd-navbar-static .rd-navbar-main{padding:16px 0 20px 0;}.section-md{padding:0px;}</style>
+    <style>.modal.show .modal-dialog {transform: translate(0,30%);}</style>
+  
   </head>
   <body>
     <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
@@ -69,6 +71,44 @@
         @else
           <h1>No tiene un plan asignado</h2>
         @endif  
+        <div class="mt-10">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+          Cambiar contraseña
+        </button>
+        
+        </div> 
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Cambiar Contraseña</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+              <form action='/cambiarContraseña' id="cambio" method="POST">
+                @csrf
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Actual Contraseña</label>
+                    <input type="password" class="form-control" name="old" placeholder="Actual Contraseña">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Nueva Contraseña</label>
+                    <input type="password" class="form-control" name="new" placeholder="Nueva Contraseña">
+                  </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                <button type="button" onclick="modificar();" class="btn btn-primary">Modificar</button>
+              </div>
+              </form>
+              
+            </div>
+          </div>
+        </div>
        
       </div>
       </section>
@@ -80,5 +120,12 @@
     <div class="snackbars" id="form-output-global"></div>
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
+    <script>
+      function modificar(){
+        if(confirm("Seguro desea cambiar la contraseña? Debera volver a loguear.")){
+          $("#cambio").submit();
+        }
+      }
+    </script>
   </body>
 </html>

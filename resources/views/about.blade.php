@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
     <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}.rd-navbar-transparent.rd-navbar-static .rd-navbar-main{padding:16px 0 20px 0;}.section-md{padding:0px;}</style>
+    <style>.modal.show .modal-dialog {transform: translate(0,30%);}
+    </style>
   </head>
   <body>
     <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
@@ -171,14 +173,14 @@
         </div>
       </section-->
       <!-- Our Team-->
-      <section class="section section-lg bg-default">
+      <section class="section section-lg bg-default" id="equipo">
         <div class="container text-center text-lg-left">
           <h2><span class="text-light">Nuestro</span> Equipo</h2>
           <div class="row row-40">
             <div class="col-md-4">
               <div class="team-box-left">
                 <div class="team-meta unit align-items-center">
-                  <div class="unit-left"><img class="img" src="images/testimonials-1-138x138.jpg" alt="" width="138" height="69"/>
+                  <div class="unit-left"><a href="https://www.google.com/maps/place/Uruguay+7286,+Boulogne,+Provincia+de+Buenos+Aires/@-34.4859616,-58.5945693,17z/data=!3m1!4b1!4m5!3m4!1s0x95bcbad0fb394c49:0x60db4a6b03bcf3d3!8m2!3d-34.4859616!4d-58.5923753" target="_blank"><img class="img" src="images/san isidro direccion.png" alt="" width="138" height="69"/></a>
                   </div>
                   <div class="unit-body">
                     <h5 class="title"><?php echo $webText[15]['textweb']; ?></h5>
@@ -191,7 +193,7 @@
             <div class="col-md-4">
               <div class="team-box-left">
                 <div class="team-meta unit align-items-center">
-                  <div class="unit-left"><img class="img" src="images/testimonials-2-138x138.jpg" alt="" width="138" height="69"/>
+                  <div class="unit-left"><a href="https://www.google.com/maps/place/Uruguay+7286,+Boulogne,+Provincia+de+Buenos+Aires/@-34.4859616,-58.5945693,17z/data=!3m1!4b1!4m5!3m4!1s0x95bcbad0fb394c49:0x60db4a6b03bcf3d3!8m2!3d-34.4859616!4d-58.5923753" target="_blank"><img class="img" src="images/san isidro direccion.png" alt="" width="138" height="69"/></a>
                   </div>
                   <div class="unit-body">
                     <h5 class="title"><?php echo $webText[18]['textweb']; ?></h5>
@@ -204,7 +206,7 @@
             <div class="col-md-4">
               <div class="team-box-left">
                 <div class="team-meta unit align-items-center">
-                  <div class="unit-left"><img class="img" src="images/testimonials-3-138x138.jpg" alt="" width="138" height="69"/>
+                  <div class="unit-left"><a href="https://www.google.com/maps/place/SC+Johnson+A+Family+COMPANY-+Pilar/@-34.3991684,-58.983749,17z/data=!4m13!1m7!3m6!1s0x95bb7dba6712dbe1:0x54d442f7fc2a58d6!2sCalle+9+%26+Del+Gasoducto,+Fatima,+Provincia+de+Buenos+Aires!3b1!8m2!3d-34.3991684!4d-58.981555!3m4!1s0x95bb7d9858ffffff:0xcab7bd8843a89301!8m2!3d-34.3997151!4d-58.9810209" target="_blank"><img class="img" src="images/pilar direccion.png" alt="" width="138" height="69"/></a>
                   </div>
                   <div class="unit-body">
                     <h5 class="title"><?php echo $webText[21]['textweb']; ?></h5>

@@ -52,7 +52,8 @@
             <div class="col-md-10 col-lg-10">
               <h5></h5>
               <!--RD Mailform-->
-              <form class="rd-form rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
+              <form  method="post" action="/enviarMail">
+                  @csrf
                 <div class="row row-10">
                   <div class="col-md-10">
                     <div class="form-wrap">
@@ -62,8 +63,8 @@
                   </div>
                   <div class="col-md-10">
                     <div class="form-wrap">
-                      <input class="form-input" id="contact-last-name" type="text" name="name" data-constraints="@Required">
-                      <label class="form-label" for="contact-last-name">Apellido</label>
+                      <input class="form-input" id="contact-last-name" type="text" name="tel" data-constraints="@Required">
+                      <label class="form-label" for="contact-last-name">Telefono/Celular</label>
                     </div>
                   </div>
                   <div class="col-12">

@@ -131,6 +131,18 @@ scratch. This page gets rid of all links and provides the needed markup only.
       </div>
       <div  class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
+        <i class="fas fa-newspaper fa-2x"></i>
+        <!--img src="LTE/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image"-->
+        </div>
+        <div class="info">
+        <!--form action="/logout" method="GET">
+         <button type="submit" class="d-block">LOGOUT</button>
+        </form-->
+          <a href="/noticias" class="d-block">Noticias</a>
+        </div>
+      </div>
+      <div  class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
         <i class="fas fa-align-left fa-2x"></i>
         <!--img src="LTE/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image"-->
         </div>

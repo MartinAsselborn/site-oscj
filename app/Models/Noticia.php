@@ -7,15 +7,19 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Facades\Storage;
 
-class Plan extends Model
+class Noticia extends Model
 {
     use HasFactory,SoftDeletes;
 
     protected $fillable = [
-        'plan','archivo'
+        'titulo','subtitulo','noticia','imagen','leermas'
     ];
 
     public function getArchivo(){
-        return "/public/".$this->archivo;
+        $path="/public/".$this->imagen;
+        if(strpos($path, "http")!==FALSE){
+            $path=str_replace("/public/","",$path);
+        }
+        return $path;
     }
 }

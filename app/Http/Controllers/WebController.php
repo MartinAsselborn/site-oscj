@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Rol;
 use App\Models\WebText;
+use App\Models\Noticia;
 use App\Models\Legajo;
 use Illuminate\Support\Facades\Auth;
 
@@ -19,7 +20,9 @@ class WebController extends Controller
     public function welcome()
     {   
         $textoswelcome=WebText::where('vista','welcome')->get();
-        $params=['webText'=>$textoswelcome];
+        $noticias=Noticia::all();
+
+        $params=['webText'=>$textoswelcome,'noticias'=>$noticias];
         return view('welcome',$params);
     }
 
@@ -32,7 +35,7 @@ class WebController extends Controller
     }
 
    
-    public function contacts()
+    public function contacts(Request $request)
     {
         return view('contacts');
     }
