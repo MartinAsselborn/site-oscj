@@ -5,6 +5,7 @@ namespace App\Imports;
 use App\Models\Legajo;
 use App\Models\Plan;
 use App\Models\User;
+use App\Models\ObraSocial;
 use Exception;
 use Illuminate\Support\Collection;
 use Maatwebsite\Excel\Concerns\ToModel;
@@ -27,6 +28,7 @@ class LegajoImport implements ToCollection,WithHeadingRow,SkipsOnError
     public function collection(Collection $rows)
     {   
         try{ 
+          
             foreach($rows as $key=>$row){
                 if(is_numeric($row['legajo'])){
                     $legajo=Legajo::where('legajo',$row['legajo'])->get();
@@ -39,13 +41,14 @@ class LegajoImport implements ToCollection,WithHeadingRow,SkipsOnError
                             $legajo->parentesco=$row['parentesco'];
                             $legajo->fecha_nac=$row['fecha_nac'];
                             $legajo->edad=$row['edad'];
-                            $legajo->obra_social=$row['obra_social'];
+                            $obra=ObraSocial::where('obra_social',$row['obra_social'])->get();
+                            $legajo->obra_social=$obra[0]['obra_social'];
                             $legajo->fecha_alta=$row['fecha_alta'];
                             $legajo->baja_scj=$row['baja_scj'];
                             $legajo->baja_obra_social=$row['baja_obra_social'];
                             $legajo->cuit=$row['cuit'];
                             $plan=Plan::where('plan',$row['plan'])->get();
-                            $legajo->plan_id=$plan[0]['plan'];
+                            $legajo->plan_id=$plan[0]['id'];
                             $legajo->contacts=$row['contacts'];
                             $legajo->email=$row['email'];
                             $legajo->save();
@@ -91,7 +94,7 @@ class LegajoImport implements ToCollection,WithHeadingRow,SkipsOnError
                 }    
                 
             }            
-
+            
         }catch(Exception $e){    
         $message=$e->getMessage();
         $message=str_replace("`","",$message);

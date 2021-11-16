@@ -56,7 +56,6 @@ class PLanController extends Controller
          }
          
          $fileName=$request->file('pdf')->store('public/planespdf','public');
-         dd($fileName);
          $plan=new Plan();
          $plan->archivo=$fileName;
          $plan->plan=$request->input('plan');
