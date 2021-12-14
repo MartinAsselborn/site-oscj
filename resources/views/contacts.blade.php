@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
+    <script async src="https://www.google.com/recaptcha/api.js"></script>
     <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}.rd-navbar-transparent.rd-navbar-static .rd-navbar-main{padding:16px 0 20px 0;}.form-input{border:1px solid gray}footer{
       margin: 5px;}.section-md{padding:0px;}</style>
   </head>
@@ -52,7 +53,7 @@
             <div class="col-md-10 col-lg-10">
               <h5></h5>
               <!--RD Mailform-->
-              <form  method="post" action="/enviarMail">
+              <form  method="post" action="" id="contactMail">
                   @csrf
                 <div class="row row-10">
                   <div class="col-md-10">
@@ -79,8 +80,13 @@
                       <label class="form-label" for="contact-email">E-mail</label>
                     </div>
                   </div>
+                  <div class="col-md-7 col-xl-8">
+                    <div class="form-wrap">
+                      <div class="g-recaptcha" data-sitekey="6Lf_qUEdAAAAACMwGKHvq2vFKGD5KjrQlKuyXT5b" data-callback="enabledSubmit"></div>
+                    </div>
+                  </div>    
                   <div class="col-md-5 col-xl-4">
-                    <button class="button button-size-1 button-block button-primary p-3" type="submit">Send</button>
+                    <button class="button button-size-1 button-block button-primary p-3" type="submit" id="send" disabled="true">Send</button>
                   </div>
                 </div>
               </form>
@@ -90,9 +96,38 @@
       
         @component('footer')
         @endcomponent
+        
+        
     </div>
     <div class="snackbars" id="form-output-global"></div>
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
+    <script>
+      function enabledSubmit(response) {
+        return new Promise(function(resolve,reject,){
+          document.getElementById('contactMail').action = '/sendMail';
+          document.getElementById('send').disabled = false;
+        })
+      }
+
+      const Toast = Swal.mixin({
+      toast: true,
+      position: 'top-end',
+      showConfirmButton: false,
+      timer: 3000,
+      timerProgressBar: true,
+      didOpen: (toast) => {
+        toast.addEventListener('mouseenter', Swal.stopTimer)
+        toast.addEventListener('mouseleave', Swal.resumeTimer)
+      }
+    })
+    let msg="<?php echo $msg;?>";
+    if(msg){
+      Toast.fire({
+        icon: 'success',
+        title: msg
+      })
+    }
+    </script>
   </body>
 </html>

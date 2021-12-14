@@ -37,7 +37,8 @@ class WebController extends Controller
    
     public function contacts(Request $request)
     {
-        return view('contacts');
+        $msg=$request->old("OK")?$request->old("OK"):$request->old("ERROR");
+        return view('contacts',["msg"=>$msg]);
     }
 
     public function verplan()

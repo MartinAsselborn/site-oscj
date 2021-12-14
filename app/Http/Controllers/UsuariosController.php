@@ -28,7 +28,7 @@ class UsuariosController extends Controller
     {
        $users=User::all();
 
-       $titulos=['Usuario','Email'];
+       $titulos=['Usuario','Username'];
 
        return view('administration.usuarios.table',['titulos'=>$titulos,'datos'=>$users]);
     }

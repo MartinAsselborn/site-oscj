@@ -32,7 +32,7 @@
         <tbody>
         @foreach($datos as $key=>$dato)
                 <tr>
-                  <td scope="row">{{$dato->name}}</th>
+                  <td scope="row">{{$dato->name}} {{$dato->lastname}}</th>
                   <td>{{$dato->legajo}}</td>
                   <td>{{$dato->email}}</td>
                   <td>

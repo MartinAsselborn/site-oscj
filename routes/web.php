@@ -42,7 +42,7 @@ Route::group(['middleware' => ['auth']], function () {
 });
 
     
-Route::post('/enviarMail',[MailController::class,'enviarMail']);
+Route::post('/sendMail',[MailController::class,'enviarMail']);
 
 Route::group(['middleware' => ['auth','role']], function () {
 

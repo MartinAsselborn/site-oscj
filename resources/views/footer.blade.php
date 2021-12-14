@@ -10,7 +10,7 @@
                       <div class="unit-left">
                         <div class="icon icon-sm icon-primary novi-icon mdi mdi-map-marker"></div>
                       </div>
-                      <div class="unit-body"><a href="#">Uruguay 7286 <br>Bulogne, Buenos Aires</a></div>
+                      <div class="unit-body"><a href="#">Uruguay 7286 <br>Boulogne, Buenos Aires</a></div>
                     </div>
                   </li>
                   <li>
@@ -18,7 +18,7 @@
                       <div class="unit-left">
                         <div class="icon icon-sm icon-primary novi-icon mdi mdi-phone"></div>
                       </div>
-                      <div class="unit-body"><a href="tel:#">+1 (800) 123 1234</a></div>
+                      <div class="unit-body"><a href="tel:#">011 4549 5792</a></div>
                     </div>
                   </li>
                   <li>
@@ -33,7 +33,7 @@
                       </div>
                     </div>
                   </li>
-                </ul><a class="d-inline-block big" href="mailto:#">mail@demolink.org</a>
+                </ul><a class="d-inline-block big" href="/contacts">vguercio@scj.com</a>
               </div>
               <div class="col-md-6 col-lg-5">
                 <h5></h5>

@@ -27,11 +27,11 @@ class MailController extends Controller
 
 
         try{
-            Mail::to("asselborn.c.m@gmail.com")->send(new ContactMail($name,$tel,$msj,$email));
-            return redirect("/contacts")->withInput(['ASDASD'=>'Name is required']);
+            Mail::to("vguercio@scj.com")->send(new ContactMail($name,$tel,$msj,$email));
+            return redirect("/contacts")->withInput(['OK'=>'Se envio correctamente.']);
   
         }catch(Exception $e){
-            return redirect("/contacts")->with('error', 'El mensaje no fue enviado');
+            return redirect("/contacts")->with('ERROR', 'El mensaje no fue enviado');
         }
     }
     
