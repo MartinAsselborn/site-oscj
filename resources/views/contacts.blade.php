@@ -105,6 +105,23 @@
     <script>
       function enabledSubmit(response) {
         return new Promise(function(resolve,reject,){
+          if(document.getElementById('contact-email').value==""){
+             document.getElementById('contact-message').style.border="1px solid #f5543f";
+             grecaptcha.reset();
+             return reject({});
+          }else if(document.getElementById('contact-message').value==""){
+            document.getElementById('contact-message').style.border="1px solid #f5543f";
+            grecaptcha.reset();
+            return reject({});
+          }else if(document.getElementById('contact-last-name').value==""){
+            document.getElementById('contact-last-name').style.border="1px solid #f5543f";
+            grecaptcha.reset();
+            return reject({});
+          }else if(document.getElementById('contact-first-name').value==""){
+            document.getElementById('contact-first-name').style.border="1px solid #f5543f";
+            grecaptcha.reset();
+            return reject({});
+          }
           document.getElementById('contactMail').action = '/sendMail';
           document.getElementById('send').disabled = false;
         })

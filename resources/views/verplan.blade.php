@@ -93,11 +93,11 @@
                 @csrf
                 <div class="form-group">
                     <label for="exampleInputPassword1">Actual Contraseña</label>
-                    <input type="password" class="form-control" name="old" placeholder="Actual Contraseña">
+                    <input type="text" class="form-control" name="old" placeholder="Actual Contraseña">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Nueva Contraseña</label>
-                    <input type="password" class="form-control" name="new" placeholder="Nueva Contraseña">
+                    <input type="text" class="form-control" name="new" placeholder="Nueva Contraseña">
                   </div>
               </div>
               <div class="modal-footer">

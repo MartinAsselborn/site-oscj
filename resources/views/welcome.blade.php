@@ -122,6 +122,9 @@ background: #516ca9 !important;
               </div>
             </div>
           </div>
+                                  <!-- MEGATLON-->
+
+                  
           <div class="swiper-slide" data-slide-bg="images/index-1-slider-3-1920x768.jpg">
             <div class="swiper-slide-caption section-lg">
               <div class="container">
@@ -131,7 +134,7 @@ background: #516ca9 !important;
                     <p class="lead" data-caption-animate="fadeInUp" data-caption-delay="350" style="color:#516ca9"><?php echo $webText[8]['textweb']; ?></p>
                     <div class="button-wrap-default" data-caption-animate="fadeInUp" data-caption-delay="450"><a class="button button-secondary-text" href="#" style="color:#516ca9;
                                       text-shadow: 0px 0px 0px #516ca9, 0px 0px 0px #516ca9, 0px 0px 0px #516ca9, 0px 0px 0px #516ca9;
-                    ">Leer mas...</a></div>
+                    " data-toggle="modal" data-target="#MEGATLON">Leer mas...</a></div>
                   </div>
                 </div>
               </div>
@@ -268,6 +271,23 @@ background: #516ca9 !important;
            @endforeach
         </div>
       </section>
+
+      <div class="modal fade" id="MEGATLON" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-body" 
+          >
+              <img src="/images/MEGATLON.jpg">
+            </div>
+      <div><center><form method="get" action="servicios/MEGATLON- Formulario de alta.xls" id="linkAltaMegatlon">
+      <p> <a href="#" onclick="$('#linkAltaMegatlon').submit();">Formulario de ALTA</a> </p>
+      </form></center></div>
+      <div style="margin:10px"><center><form method="get" action="servicios/MEGATLON- Formulario de baja.xls" id="linkBajaMegatlon">
+      <p> <a href="#" onclick="$('#linkBajaMegatlon').submit();">Formulario de BAJA</a> </p>
+      </form></center></div>
+          </div>
+        </div>
+      </div>
       <!--section class="parallax-container" data-parallax-img="images/parallax-1-1920x1026.jpg">
         <div class="parallax-content section-xl context-dark text-center">
           <div class="container">
