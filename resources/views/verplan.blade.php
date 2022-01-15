@@ -64,6 +64,7 @@
           @else
             <div class="unit-left" style='margin:20px 0px; '><a href="http://www.medicus.com.ar" target="_blank"><img  src="images/medicus.png"  alt="" width="138" height="59"/></a></div>               
           @endif
+          <div><H1>Reintegros:<H1></div>
           @if($detector==0)  
            @endif         <embed src="{{$legajo->getPlan()?$legajo->getPlan()->getArchivo():'none';}}?{{rand(1231,40000);}}#toolbar=1&navpanes=1&scrollbar=1&pic={{random_int(163000,200000)}}" type="application/pdf" width="100%" height="600px" />
   
