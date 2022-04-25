@@ -141,6 +141,7 @@ class UsuariosController extends Controller
          }
          try{
             $user[0]->password=Hash::make($pass);
+            $user[0]->primer_cambio_pass=1;
             $user[0]->save();
          }catch(Exception $e){
             echo "<script>

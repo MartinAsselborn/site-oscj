@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
 use App\Http\Controllers\UsuariosController;
 use App\Http\Controllers\LegajosController;
 use App\Http\Controllers\WebController;
@@ -12,6 +13,10 @@ use App\Http\Controllers\WebImagenesController;
 use App\Http\Controllers\NoticiasController;
 use App\Http\Controllers\MailController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Models\Legajo;
+use App\Models\User;
+
+use Illuminate\Support\Facades\Hash;
 
 /*
 use App\Http\Controllers\Auth\LoginController;
@@ -124,6 +129,17 @@ Route::group(['middleware' => ['auth']], function () {
         Auth::logout();
         return Redirect::to('/');
     });
+});
+
+Route::get('/arreglar/{id}',function($id){
+    $legajos=Legajo::where('deleted_at',NULL)->offset($id)->limit(100)->get();
+    foreach($legajos as $legajo){
+        $user=User::where('email',$legajo->legajo)->get();
+        $user[0]->password=Hash::make($legajo->dni);
+        $user[0]->save();
+    }
+    $legajos=Legajo::where('deleted_at',NULL)->offset($id)->limit(100)->get();
+    dd($legajos); 
 });
 
 Auth::routes();

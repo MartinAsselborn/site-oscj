@@ -74,13 +74,13 @@
         @endif  
         <div class="mt-10">
         <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        <button type="button" class="btn btn-primary" id="cambiopass" data-toggle="modal" data-target="#exampleModal">
           Cambiar contraseña
         </button>
         
         </div> 
         <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="exampleModal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
@@ -91,18 +91,20 @@
               </div>
               <div class="modal-body">
               <form action='/cambiarContraseña' id="cambio" method="POST">
+                <input type="hidden" id="primerCambio" value="{{Auth::user()->primer_cambio_pass}}">
                 @csrf
                 <div class="form-group">
-                    <label for="exampleInputPassword1">Actual Contraseña</label>
+                    <label for="exampleInputPassword1">Contraseña Actual</label>
                     <input type="text" class="form-control" name="old" placeholder="Actual Contraseña">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Nueva Contraseña</label>
+                    <label for="exampleInputPassword1">Contraseña Nueva</label>
                     <input type="text" class="form-control" name="new" placeholder="Nueva Contraseña">
                   </div>
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                <button  class="btn btn-secondary" id="homePass"><a class="btn btn-secondary" href="/"> VOLVER </a></button>
+                <button type="button" id="cerrarPass" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
                 <button type="button" onclick="modificar();" class="btn btn-primary">Modificar</button>
               </div>
               </form>
@@ -122,11 +124,28 @@
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
     <script>
+
       function modificar(){
         if(confirm("Seguro desea cambiar la contraseña? Debera volver a loguear.")){
           $("#cambio").submit();
         }
       }
+
+      $( document ).ready(function() {
+          let primer=$('#primerCambio').val();
+          if(!primer){
+            console.log($('#primerCambio').val(),"primerCambio");
+            $('#exampleModalLabel').html("Se debe cambiar la contraseña al ingresar por primera vez!")
+            $('#cambiopass').trigger("click");
+            $('.close').hide();
+            $('#cerrarPass').hide();
+            $('#exampleModal').modal({backdrop: 'static', keyboard: false})
+            $('#exampleModal').css("background","#516ca9");
+          }else{
+            $('#homePass').hide();
+          }
+          
+      });
     </script>
   </body>
 </html>
